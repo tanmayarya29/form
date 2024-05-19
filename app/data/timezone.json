@@ -1,0 +1,117 @@
+[
+  {
+    "name": "United States",
+    "code": "US",
+    "timezones": [
+      {
+        "name": "Eastern Time",
+        "zone": "America/New_York",
+        "utc_offset": "-05:00"
+      },
+      {
+        "name": "Central Time",
+        "zone": "America/Chicago",
+        "utc_offset": "-06:00"
+      },
+      {
+        "name": "Mountain Time",
+        "zone": "America/Denver",
+        "utc_offset": "-07:00"
+      },
+      {
+        "name": "Pacific Time",
+        "zone": "America/Los_Angeles",
+        "utc_offset": "-08:00"
+      },
+      {
+        "name": "Alaska Time",
+        "zone": "America/Anchorage",
+        "utc_offset": "-09:00"
+      },
+      {
+        "name": "Hawaii-Aleutian Time",
+        "zone": "Pacific/Honolulu",
+        "utc_offset": "-10:00"
+      }
+    ]
+  },
+  {
+    "name": "Canada",
+    "code": "CA",
+    "timezones": [
+      {
+        "name": "Eastern Time",
+        "zone": "America/Toronto",
+        "utc_offset": "-05:00"
+      },
+      {
+        "name": "Central Time",
+        "zone": "America/Winnipeg",
+        "utc_offset": "-06:00"
+      },
+      {
+        "name": "Mountain Time",
+        "zone": "America/Edmonton",
+        "utc_offset": "-07:00"
+      },
+      {
+        "name": "Pacific Time",
+        "zone": "America/Vancouver",
+        "utc_offset": "-08:00"
+      },
+      {
+        "name": "Atlantic Time",
+        "zone": "America/Halifax",
+        "utc_offset": "-04:00"
+      },
+      {
+        "name": "Newfoundland Time",
+        "zone": "America/St_Johns",
+        "utc_offset": "-03:30"
+      }
+    ]
+  },
+  {
+    "name": "Australia",
+    "code": "AU",
+    "timezones": [
+      {
+        "name": "Australian Eastern Time",
+        "zone": "Australia/Sydney",
+        "utc_offset": "+10:00"
+      },
+      {
+        "name": "Australian Central Time",
+        "zone": "Australia/Adelaide",
+        "utc_offset": "+09:30"
+      },
+      {
+        "name": "Australian Western Time",
+        "zone": "Australia/Perth",
+        "utc_offset": "+08:00"
+      }
+    ]
+  },
+  {
+    "name": "United Kingdom",
+    "code": "GB",
+    "timezones": [
+      {
+        "name": "Greenwich Mean Time",
+        "zone": "Europe/London",
+        "utc_offset": "+00:00"
+      }
+    ]
+  },
+  {
+    "name": "Germany",
+    "code": "DE",
+    "timezones": [
+      {
+        "name": "Central European Time",
+        "zone": "Europe/Berlin",
+        "utc_offset": "+01:00"
+      }
+    ]
+  }
+]

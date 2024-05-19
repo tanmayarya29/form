@@ -1,0 +1,232 @@
+[
+  {
+    "name": "United States",
+    "code": "US",
+    "colleges": [
+      {
+        "name": "Harvard University",
+        "location": "Cambridge, MA"
+      },
+      {
+        "name": "Stanford University",
+        "location": "Stanford, CA"
+      },
+      {
+        "name": "Massachusetts Institute of Technology",
+        "location": "Cambridge, MA"
+      },
+      {
+        "name": "California Institute of Technology",
+        "location": "Pasadena, CA"
+      },
+      {
+        "name": "University of Chicago",
+        "location": "Chicago, IL"
+      },
+      {
+        "name": "Princeton University",
+        "location": "Princeton, NJ"
+      },
+      {
+        "name": "Yale University",
+        "location": "New Haven, CT"
+      },
+      {
+        "name": "Columbia University",
+        "location": "New York, NY"
+      },
+      {
+        "name": "University of Pennsylvania",
+        "location": "Philadelphia, PA"
+      },
+      {
+        "name": "University of California, Berkeley",
+        "location": "Berkeley, CA"
+      }
+    ]
+  },
+  {
+    "name": "Canada",
+    "code": "CA",
+    "colleges": [
+      {
+        "name": "University of Toronto",
+        "location": "Toronto, ON"
+      },
+      {
+        "name": "University of British Columbia",
+        "location": "Vancouver, BC"
+      },
+      {
+        "name": "McGill University",
+        "location": "Montreal, QC"
+      },
+      {
+        "name": "University of Alberta",
+        "location": "Edmonton, AB"
+      },
+      {
+        "name": "University of Waterloo",
+        "location": "Waterloo, ON"
+      },
+      {
+        "name": "University of Calgary",
+        "location": "Calgary, AB"
+      },
+      {
+        "name": "Queen's University",
+        "location": "Kingston, ON"
+      },
+      {
+        "name": "Western University",
+        "location": "London, ON"
+      },
+      {
+        "name": "Simon Fraser University",
+        "location": "Burnaby, BC"
+      },
+      {
+        "name": "University of Ottawa",
+        "location": "Ottawa, ON"
+      }
+    ]
+  },
+  {
+    "name": "Australia",
+    "code": "AU",
+    "colleges": [
+      {
+        "name": "Australian National University",
+        "location": "Canberra"
+      },
+      {
+        "name": "University of Melbourne",
+        "location": "Melbourne"
+      },
+      {
+        "name": "University of Sydney",
+        "location": "Sydney"
+      },
+      {
+        "name": "University of Queensland",
+        "location": "Brisbane"
+      },
+      {
+        "name": "University of New South Wales",
+        "location": "Sydney"
+      },
+      {
+        "name": "Monash University",
+        "location": "Melbourne"
+      },
+      {
+        "name": "University of Western Australia",
+        "location": "Perth"
+      },
+      {
+        "name": "University of Adelaide",
+        "location": "Adelaide"
+      },
+      {
+        "name": "University of Technology Sydney",
+        "location": "Sydney"
+      },
+      {
+        "name": "University of Wollongong",
+        "location": "Wollongong"
+      }
+    ]
+  },
+  {
+    "name": "Germany",
+    "code": "DE",
+    "colleges": [
+      {
+        "name": "Ludwig Maximilian University of Munich",
+        "location": "Munich"
+      },
+      {
+        "name": "Heidelberg University",
+        "location": "Heidelberg"
+      },
+      {
+        "name": "Technical University of Munich",
+        "location": "Munich"
+      },
+      {
+        "name": "Humboldt University of Berlin",
+        "location": "Berlin"
+      },
+      {
+        "name": "University of Freiburg",
+        "location": "Freiburg"
+      },
+      {
+        "name": "University of Göttingen",
+        "location": "Göttingen"
+      },
+      {
+        "name": "University of Hamburg",
+        "location": "Hamburg"
+      },
+      {
+        "name": "University of Cologne",
+        "location": "Cologne"
+      },
+      {
+        "name": "University of Bonn",
+        "location": "Bonn"
+      },
+      {
+        "name": "University of Stuttgart",
+        "location": "Stuttgart"
+      }
+    ]
+  },
+  {
+    "name": "United Kingdom",
+    "code": "GB",
+    "colleges": [
+      {
+        "name": "University of Oxford",
+        "location": "Oxford"
+      },
+      {
+        "name": "University of Cambridge",
+        "location": "Cambridge"
+      },
+      {
+        "name": "Imperial College London",
+        "location": "London"
+      },
+      {
+        "name": "London School of Economics and Political Science",
+        "location": "London"
+      },
+      {
+        "name": "University College London",
+        "location": "London"
+      },
+      {
+        "name": "University of Edinburgh",
+        "location": "Edinburgh"
+      },
+      {
+        "name": "University of Manchester",
+        "location": "Manchester"
+      },
+      {
+        "name": "University of Bristol",
+        "location": "Bristol"
+      },
+      {
+        "name": "University of Warwick",
+        "location": "Coventry"
+      },
+      {
+        "name": "University of Glasgow",
+        "location": "Glasgow"
+      }
+    ]
+  }
+]

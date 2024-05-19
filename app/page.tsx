@@ -1,113 +1,133 @@
-import Image from "next/image";
+"use client";
+import Page1 from "./pages/Page1";
+import { useState } from "react";
+import Page2 from "./pages/Page2";
+import Page3 from "./pages/Page3";
+import CustomStepper from "./components/CustomStepper";
+import { Card } from "@mui/material";
+import Page4 from "./pages/Page4";
+
+export interface mainState {
+  page1: IPage1;
+  page2: IPage2;
+  page3: IPage3;
+  progress: number;
+}
+
+export interface IPage1 {
+  name: string; // input
+  gender: string; // select
+  pronoun: string; // select
+  dob: string; // date
+}
+
+export interface IPage2 {
+  country: string; // select
+  timezone: string; // select based on country
+  college: string; // input
+  course: string; // input
+  passoutYear: string; // input
+  specialization: string; // input
+  minor: string; // input
+}
+
+export interface IPage3 {
+  whatsapp: string; // input
+  linkedin: string; // input
+  twitter: string; // input
+  mail: string; // input
+  phone: string; // input + country code
+}
+
+export const defaultPage1Props = {
+  name: "",
+  gender: "",
+  pronoun: "",
+  dob: "",
+};
+
+export const defaultPage2Props = {
+  country: "",
+  timezone: "",
+  college: "",
+  course: "",
+  passoutYear: "",
+  specialization: "",
+  minor: "",
+};
+
+export const defaultPage3Props = {
+  whatsapp: "",
+  linkedin: "",
+  twitter: "",
+  mail: "",
+  phone: "",
+};
+
+const defaultMainState = {
+  page1: defaultPage1Props,
+  page2: defaultPage2Props,
+  page3: defaultPage3Props,
+  progress: 0,
+};
 
 export default function Home() {
+  const [mainState, setMainState] = useState<mainState>(defaultMainState);
+
+  const steps = [
+    "Personal Information",
+    "Education Information",
+    "Contact Information",
+    "Thank You",
+  ];
+
+  const [currentStep, setCurrentStep] = useState<number>(0);
+
+  const pageProps = {
+    mainState: mainState,
+    setMainState: setMainState,
+  };
+
+  const currentPage =
+    currentStep === 0 ? (
+      <Page1 {...pageProps} />
+    ) : currentStep === 1 ? (
+      <Page2 {...pageProps} />
+    ) : currentStep === 2 ? (
+      <Page3 {...pageProps} />
+    ) : (
+      <Page4 {...pageProps} />
+    );
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+    <div
+      className="
+    flex
+    justify-center
+    items-center
+    h-screen
+    bg-gray-200
+    "
+    >
+      <Card
+        sx={{
+          width: "100%",
+          maxWidth: "800px",
+          bgcolor: "background.paper",
+          padding: 2,
+          height: "550px",
+          borderRadius: 2,
+          boxShadow: 3,
+          overflowY: "auto",
+        }}
+      >
+        <CustomStepper
+          steps={steps}
+          currentStep={currentStep}
+          setCurrentStep={setCurrentStep}
+          currentPage={currentPage}
         />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      </Card>
+    </div>
   );
 }
